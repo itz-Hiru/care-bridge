@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/xml_bg_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/signup_layout_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/signup_header_text"
+            android:text="@string/signup_header_text"
+            android:fontFamily="@font/login_signup_header_font"
+            android:textSize="@dimen/signup_header_text_size"
+            android:textColor="@color/text_color"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/signup_header_text_margin_top" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/signup_image"
+            android:layout_below="@id/signup_header_text"
+            android:contentDescription="@string/signup_image_description"
+            android:src="@drawable/signup_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/signup_image_margin_top" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/signup_card"
+            android:layout_below="@id/signup_image"
+            android:layout_marginTop="@dimen/signup_card_margin_top"
+            app:cardCornerRadius="@dimen/signup_card_corner_radius"
+            app:cardElevation="@dimen/signup_card_elevation">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/card_color"
+                android:padding="@dimen/signup_card_layout_padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/email_text"
+                    android:text="@string/email_text"
+                    android:textSize="@dimen/signup_email_text_size"
+                    android:textColor="@color/form_text_color"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/signup_email_text_margin_top"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/email"
+                    android:layout_below="@id/email_text"
+                    android:layout_marginStart="@dimen/signup_email_edit_text_margin_start"
+                    android:layout_marginTop="@dimen/signup_email_edit_text_margin_top"
+                    android:layout_marginEnd="@dimen/signup_email_edit_text_margin_end"
+                    android:background="@drawable/text_input_background"
+                    android:hint="@string/email_enter_hint"
+                    android:importantForAutofill="no"
+                    android:inputType="textEmailAddress"
+                    android:padding="@dimen/signup_email_edit_text_padding"
+                    android:textColorHint="@color/form_text_hint_color"
+                    android:textColor="@color/form_text_input_color"
+                    tools:ignore="TextContrastCheck,TouchTargetSizeCheck,VisualLintTextFieldSize" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/password_text"
+                    android:layout_below="@id/email"
+                    android:text="@string/password_text"
+                    android:textSize="@dimen/signup_password_text_size"
+                    android:textColor="@color/form_text_color"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/signup_password_text_margin_top"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/enter_password_linear"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/password_text"
+                    android:layout_marginStart="@dimen/signup_password_edit_text_margin_start"
+                    android:layout_marginTop="@dimen/signup_password_edit_text_margin_top"
+                    android:layout_marginEnd="@dimen/signup_password_edit_text_margin_end">
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/text_input_background"
+                        android:hint="@string/password_enter_hint"
+                        android:importantForAutofill="no"
+                        android:inputType="textPassword"
+                        android:padding="@dimen/signup_password_edit_text_padding"
+                        android:textColorHint="@color/form_text_hint_color"
+                        android:textColor="@color/form_text_input_color"
+                        tools:ignore="TextContrastCheck,TouchTargetSizeCheck,VisualLintTextFieldSize" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/password_toggle"
+                        android:src="@drawable/ic_password_vissible"
+                        android:contentDescription="@string/password_toggle_icon_description"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="-35dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/confirm_password_text"
+                    android:layout_below="@id/enter_password_linear"
+                    android:text="@string/confirm_password_text"
+                    android:textSize="@dimen/signup_confirm_password_text_size"
+                    android:textColor="@color/form_text_color"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/signup_password_text_margin_top"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/confirm_password_linear"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/confirm_password_text"
+                    android:layout_marginStart="@dimen/signup_password_edit_text_margin_start"
+                    android:layout_marginTop="@dimen/signup_password_edit_text_margin_top"
+                    android:layout_marginEnd="@dimen/signup_password_edit_text_margin_end">
+
+                    <EditText
+                        android:id="@+id/confirm_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/text_input_background"
+                        android:hint="@string/confirm_password_hint"
+                        android:importantForAutofill="no"
+                        android:inputType="textPassword"
+                        android:padding="@dimen/signup_confirm_password_edit_text_padding"
+                        android:textColorHint="@color/form_text_hint_color"
+                        android:textColor="@color/form_text_input_color"
+                        tools:ignore="TextContrastCheck,TouchTargetSizeCheck,VisualLintTextFieldSize" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/confirm_password_toggle"
+                        android:src="@drawable/ic_password_vissible"
+                        android:contentDescription="@string/password_toggle_icon_description"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="-35dp"/>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/signup_button_width"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/signup_button"
+                    android:layout_below="@id/confirm_password_linear"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/signup_button_margin_top"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background"
+                        android:padding="@dimen/signup_button_padding">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/signup_button_text"
+                            android:textSize="@dimen/signup_button_text_size"
+                            android:textStyle="bold"
+                            android:textColor="@color/button_text_color"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/signup_button"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/login_link_layout_margin_top">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/login_help_text"
+                        android:textColor="@color/text_color"/>
+
+                    <TextView
+                        android:id="@+id/login_link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/login_link_margin_start"
+                        android:text="@string/login_link_text"
+                        android:textColor="@android:color/holo_blue_dark"
+                        tools:ignore="TextContrastCheck" />
+
+                </LinearLayout>
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/progressBar"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="true"
+                    style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Large"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</ScrollView>

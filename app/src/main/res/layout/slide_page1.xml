@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="@color/started_page_color">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/header_part_01"
+        android:text="@string/what_is_carebridge"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@color/started_page_header_color"
+        android:fontFamily="@font/mukta_semi_bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/header_part_02"
+        android:layout_below="@id/header_part_01"
+        android:text="@string/donation_system"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        android:textColor="@color/started_page_header_color"
+        android:fontFamily="@font/mukta_semi_bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-5dp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:id="@+id/app_icon"
+        android:layout_below="@id/header_part_02"
+        android:background="@drawable/ic_launcher"
+        android:backgroundTint="@color/started_page_header_color"
+        android:contentDescription="@string/app_icon_description"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sub_header"
+        android:layout_alignParentBottom="true"
+        android:text="@string/join_us_in_making_a_difference"
+        android:textSize="25sp"
+        android:textColor="@color/started_page_header_color"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="15dp"/>
+
+</RelativeLayout>

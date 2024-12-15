@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:id="@+id/app_icon"
+            android:background="@drawable/ic_launcher_round"
+            android:backgroundTint="@color/splash_image_color"
+            android:contentDescription="@string/app_icon_description"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/from"
+            android:textSize="16sp"
+            android:textColor="@color/splash_small_text_color"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/app_developers"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/app_developers"
+            android:text="@string/carebridge_devops_team"
+            android:textSize="20sp"
+            android:textColor="@color/splash_big_text_color"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp"/>
+
+</RelativeLayout>

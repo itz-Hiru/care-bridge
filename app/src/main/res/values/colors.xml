@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#55AD9B</color>
+    <color name="purple_500">#55AD9B</color>
+    <color name="purple_700">#55AD9B</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="red">#ff0000</color>
+
+    <!-- Default colors -->
+    <color name="xml_bg_color">#D9D9D9</color>
+    <color name="card_color">#EEEEEE</color>
+    <color name="text_color">#000000</color>
+
+    <!-- Button colors -->
+    <color name="button_background_color">#55AD9B</color>
+    <color name="button_pressed_background_color">#95D2B3</color>
+    <color name="button_text_color">#F1F8E8</color>
+
+    <!-- Form colors -->
+    <color name="form_text_color">#000000</color>
+    <color name="form_text_input_color">#181C14</color>
+    <color name="form_text_hint_color">#3C3D37</color>
+    <color name="text_input_background_color">#BEBEBE</color>
+
+    <!-- Splash screen colors -->
+    <color name="splash_bg_color">#F1F8E8</color>
+    <color name="splash_image_color">#55AD9B</color>
+    <color name="splash_small_text_color">#181C14</color>
+    <color name="splash_big_text_color">#55AD9B</color>
+
+    <!-- Get started screen colors -->
+    <color name="started_page_color">#F1F8E8</color>
+    <color name="started_pages_tab_indicator_color">#95D2B3</color>
+    <color name="started_page_header_color">#55AD9B</color>
+
+    <!-- Pie Chart colors -->
+    <color name="pie_data_color">#000000</color>
+
+</resources>

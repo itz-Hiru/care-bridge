@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/xml_bg_color"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/product_name_header"
+            android:textSize="24sp"
+            android:textColor="@color/text_color"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:id="@+id/product_image_card"
+            android:layout_below="@id/product_name_header"
+            android:layout_marginTop="35dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/card_color"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="240dp"
+                    android:id="@+id/product_image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_product"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/searched_product_image_description"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/product_details_header"
+            android:layout_below="@id/product_image_card"
+            android:text="@string/searched_product_details_header"
+            android:textSize="20sp"
+            android:textColor="@color/text_color"
+            android:textStyle="bold"
+            android:layout_marginTop="35dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/product_name_linear"
+            android:layout_below="@id/product_details_header"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/searched_product_name"
+                android:textColor="@color/form_text_color"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/product_name"
+                android:textColor="@color/form_text_hint_color"
+                android:textSize="16sp"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/product_category_linear"
+            android:layout_below="@id/product_name_linear"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:padding="5dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/searched_product_category"
+                android:textColor="@color/form_text_color"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/product_category"
+                android:textColor="@color/form_text_hint_color"
+                android:textSize="16sp"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/product_quantity_linear"
+            android:layout_below="@id/product_category_linear"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/searched_product_quantity"
+                android:textColor="@color/form_text_color"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/product_quantity"
+                android:textColor="@color/form_text_hint_color"
+                android:textSize="16sp"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/product_description_linear"
+            android:layout_below="@id/product_quantity_linear"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/searched_product_description"
+                android:textColor="@color/form_text_color"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/product_description"
+                android:textColor="@color/form_text_hint_color"
+                android:textSize="16sp"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/divider_line"
+            android:layout_below="@id/product_description_linear"
+            android:background="@color/text_color"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/donor_details_header"
+            android:layout_below="@id/divider_line"
+            android:text="@string/searched_product_donor_details_header"
+            android:textSize="20sp"
+            android:textColor="@color/text_color"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/donor_name_linear"
+            android:layout_below="@id/donor_details_header"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/searched_product_donor_name"
+                android:textColor="@color/form_text_color"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/donor_name"
+                android:textColor="@color/form_text_hint_color"
+                android:textSize="16sp"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/donor_location_linear"
+            android:layout_below="@id/donor_name_linear"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/searched_donor_location"
+                android:textColor="@color/form_text_color"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/donor_location"
+                android:textColor="@color/form_text_hint_color"
+                android:textSize="16sp"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/donor_contact_linear"
+            android:layout_below="@id/donor_location_linear"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/searched_donor_contact"
+                android:textColor="@color/form_text_color"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/donor_contact"
+                android:textColor="@color/form_text_hint_color"
+                android:textSize="16sp"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/request_btn"
+            android:layout_below="@id/donor_contact_linear"
+            android:layout_marginTop="25dp"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="15dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/request_btn_text"
+                    android:textSize="16sp"
+                    android:textColor="@color/button_text_color"
+                    android:textStyle="bold"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:paddingStart="25dp"
+                    android:paddingEnd="25dp"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</ScrollView>
