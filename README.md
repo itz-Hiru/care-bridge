@@ -94,7 +94,7 @@ Carebridge/
 #### 🔥 Firebase Integration
 - Firebase Authentication
 - Firebase Realtime Database
-- Firebase Cloud Messaging
+- Firebase Storage
 
 ### 🛠 Tech Stack
 - **Language**: Java
